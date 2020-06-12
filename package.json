@@ -1,0 +1,64 @@
+{
+  "name": "@jdsweeney/intercom-take-home-test",
+  "version": "1.0.0",
+  "description": "Small program to determine the nearest set of customers to a lat/long coords",
+  "main": "index.js",
+  "typings": "types.d.ts",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "generate-customer-list": "npm run test && npm run build && node ./taskRunners/generateListOfCustomersToInviteWithin100kmOfIntercomHeadquarters.js -- 53.339428 -6.257664 100",
+    "build": "npx env-cmd -e production -r ./.env-cmdrc npx rollup -c",
+    "build-dev": "npx env-cmd -e production,development -r ./.env-cmdrc npx rollup -c",
+    "build-dev:watch": "npm run build-dev -- -w",
+    "test": "npx env-cmd -e production,test -r ./.env-cmdrc npx jest",
+    "prepublishOnly": "npm cache clean --force && npm install && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jd-sweeney/the-take-home-test"
+  },
+  "keywords": [
+    "Intercom",
+    "Intercom Get Customers",
+    "Intercom Take Home Test",
+    "Intercom Invite Food and Drinks"
+  ],
+  "author": "Joshua Duenas <joshuadsweeney@live.ie>",
+  "bugs": {
+    "url": "https://github.com/jd-sweeney/the-take-home-test/issues"
+  },
+  "homepage": "https://github.com/jd-sweeney/the-take-home-test#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.2",
+    "@types/camelcase-keys": "^5.1.1",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "env-cmd": "^10.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "jest-extended": "^0.11.5",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
+    "rollup": "^2.15.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "camelcase-keys": "^6.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js|ts|json}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

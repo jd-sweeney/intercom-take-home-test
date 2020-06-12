@@ -1,0 +1,6 @@
+{
+  "user_id": 123,
+  "name": "Three Arena",
+  "latitude": 53.3474963,
+  "longitude": -6.2306965
+}

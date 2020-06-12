@@ -1,0 +1,14 @@
+.vscode/
+node_modules/
+src/
+.env-cmdrc
+.eslintrc
+.npmignore
+.prettierrc
+global.d.ts
+index.tsx
+jest.config.js
+README.md
+tsconfig.json
+rollup.config.js
+taskRunners/
