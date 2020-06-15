@@ -2,7 +2,7 @@
   "name": "@jdsweeney/intercom-take-home-test",
   "version": "1.0.0",
   "description": "Small program to determine the nearest set of customers to a lat/long coords",
-  "main": "index.js",
+  "main": "dist/index.js",
   "typings": "types.d.ts",
   "engines": {
     "node": ">=8"
@@ -25,7 +25,7 @@
     "Intercom Take Home Test",
     "Intercom Invite Food and Drinks"
   ],
-  "author": "Joshua Duenas <joshuadsweeney@live.ie>",
+  "author": "Joshua Duenas",
   "bugs": {
     "url": "https://github.com/jd-sweeney/the-take-home-test/issues"
   },

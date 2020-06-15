@@ -6,7 +6,7 @@ src/
 .npmignore
 .prettierrc
 global.d.ts
-index.tsx
+index.ts
 jest.config.js
 README.md
 tsconfig.json
